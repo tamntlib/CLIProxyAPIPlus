@@ -44,7 +44,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: [self-hosted, cliproxy]
+    runs-on: ubuntu-latest
     steps:
       - name: Resolve build ref
         id: ref
