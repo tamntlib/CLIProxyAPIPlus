@@ -13,8 +13,8 @@ name: docker-image
 #
 # Registries:
 #   - GHCR: ghcr.io/<owner>/cli-proxy-api-plus using built-in GITHUB_TOKEN
-#   - Docker Hub: kaitranntt/cli-proxy-api-plus when DOCKERHUB_TOKEN is
-#     configured (DOCKERHUB_USERNAME is optional; defaults to kaitranntt)
+#   - Docker Hub: tamntlib/cli-proxy-api-plus when DOCKERHUB_TOKEN is
+#     configured (DOCKERHUB_USERNAME is optional; defaults to tamntlib)
 
 on:
   workflow_dispatch:
@@ -32,7 +32,7 @@ env:
   APP_NAME: CLIProxyAPI
   GHCR_REGISTRY: ghcr.io
   GHCR_IMAGE_NAME: ${{ github.repository_owner }}/cli-proxy-api-plus
-  DOCKERHUB_IMAGE_NAME: kaitranntt/cli-proxy-api-plus
+  DOCKERHUB_IMAGE_NAME: tamntlib/cli-proxy-api-plus
 
 permissions:
   contents: read
@@ -94,7 +94,7 @@ jobs:
         if: steps.dockerhub.outputs.enabled == 'true'
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME || 'kaitranntt' }}
+          username: ${{ secrets.DOCKERHUB_USERNAME || 'tamntlib' }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Lowercase image names
@@ -169,7 +169,7 @@ jobs:
               echo "Pull: \`docker pull ${DOCKERHUB_REF}:${VERSION}\`"
             else
               echo
-              echo "Docker Hub skipped: configure \`DOCKERHUB_TOKEN\` to publish \`${DOCKERHUB_REF}\`. Set \`DOCKERHUB_USERNAME\` only if the login account is not \`kaitranntt\`."
+              echo "Docker Hub skipped: configure \`DOCKERHUB_TOKEN\` to publish \`${DOCKERHUB_REF}\`. Set \`DOCKERHUB_USERNAME\` only if the login account is not \`tamntlib\`."
               echo
               echo "Pull: \`docker pull ${GHCR_REF}:${VERSION}\`"
             fi

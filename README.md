@@ -70,29 +70,29 @@ Multi-arch images (`linux/amd64`, `linux/arm64`) are published to Docker Hub and
 
 ```sh
 # Pull a specific version (recommended)
-docker pull kaitranntt/cli-proxy-api-plus:v6.9.45-0
+docker pull tamntlib/cli-proxy-api-plus:v6.9.45-0
 
 # Or pull the latest published release
-docker pull kaitranntt/cli-proxy-api-plus:latest
+docker pull tamntlib/cli-proxy-api-plus:latest
 ```
 
 GHCR mirror:
 
 ```sh
-docker pull ghcr.io/kaitranntt/cli-proxy-api-plus:latest
+docker pull ghcr.io/tamntlib/cli-proxy-api-plus:latest
 ```
 
 Or use the included `docker-compose.yml` (defaults to the Docker Hub image, builds from source if `CLI_PROXY_IMAGE` is overridden):
 
 ```sh
-git clone https://github.com/kaitranntt/CLIProxyAPIPlus.git
+git clone https://github.com/tamntlib/CLIProxyAPIPlus.git
 cd CLIProxyAPIPlus
 docker compose up -d
 ```
 
 Available tags:
-- Docker Hub: [`kaitranntt/cli-proxy-api-plus`](https://hub.docker.com/r/kaitranntt/cli-proxy-api-plus)
-- GHCR: [`ghcr.io/kaitranntt/cli-proxy-api-plus`](https://github.com/kaitranntt/CLIProxyAPIPlus/pkgs/container/cli-proxy-api-plus)
+- Docker Hub: [`tamntlib/cli-proxy-api-plus`](https://hub.docker.com/r/tamntlib/cli-proxy-api-plus)
+- GHCR: [`ghcr.io/tamntlib/cli-proxy-api-plus`](https://github.com/tamntlib/CLIProxyAPIPlus/pkgs/container/cli-proxy-api-plus)
 
 ## Management API
 
@@ -100,7 +100,7 @@ see [MANAGEMENT_API.md](https://help.router-for.me/management/api)
 
 ## Usage Statistics
 
-Since v6.10.0, upstream CLIProxyAPI and [CPAMC](https://github.com/router-for-me/Cli-Proxy-API-Management-Center) no longer ship built-in usage statistics. CLIProxyAPIPlus preserves this workflow with its usage logger and the maintained [CPAMC dashboard fork](https://github.com/kaitranntt/Cli-Proxy-API-Management-Center), which is the default management panel release stream.
+Since v6.10.0, upstream CLIProxyAPI and [CPAMC](https://github.com/router-for-me/Cli-Proxy-API-Management-Center) no longer ship built-in usage statistics. CLIProxyAPIPlus preserves this workflow with its usage logger and the maintained [CPAMC dashboard fork](https://github.com/router-for-me/Cli-Proxy-API-Management-Center), which is the default management panel release stream.
 
 If you need a separate external usage service, use:
 

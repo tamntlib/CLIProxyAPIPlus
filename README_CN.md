@@ -70,29 +70,29 @@ CLIProxyAPI 用户手册： [https://help.router-for.me/](https://help.router-fo
 
 ```sh
 # 拉取指定版本（推荐）
-docker pull kaitranntt/cli-proxy-api-plus:v6.9.45-0
+docker pull tamntlib/cli-proxy-api-plus:v6.9.45-0
 
 # 或拉取最新发布版本
-docker pull kaitranntt/cli-proxy-api-plus:latest
+docker pull tamntlib/cli-proxy-api-plus:latest
 ```
 
 GHCR 镜像：
 
 ```sh
-docker pull ghcr.io/kaitranntt/cli-proxy-api-plus:latest
+docker pull ghcr.io/tamntlib/cli-proxy-api-plus:latest
 ```
 
 也可以使用仓库内置的 `docker-compose.yml`（默认使用 Docker Hub 镜像；如需覆盖，可设置 `CLI_PROXY_IMAGE`）：
 
 ```sh
-git clone https://github.com/kaitranntt/CLIProxyAPIPlus.git
+git clone https://github.com/tamntlib/CLIProxyAPIPlus.git
 cd CLIProxyAPIPlus
 docker compose up -d
 ```
 
 可用标签：
-- Docker Hub: [`kaitranntt/cli-proxy-api-plus`](https://hub.docker.com/r/kaitranntt/cli-proxy-api-plus)
-- GHCR: [`ghcr.io/kaitranntt/cli-proxy-api-plus`](https://github.com/kaitranntt/CLIProxyAPIPlus/pkgs/container/cli-proxy-api-plus)
+- Docker Hub: [`tamntlib/cli-proxy-api-plus`](https://hub.docker.com/r/tamntlib/cli-proxy-api-plus)
+- GHCR: [`ghcr.io/tamntlib/cli-proxy-api-plus`](https://github.com/tamntlib/CLIProxyAPIPlus/pkgs/container/cli-proxy-api-plus)
 
 ## 管理 API 文档
 
@@ -100,7 +100,7 @@ docker compose up -d
 
 ## 使用量统计
 
-自 v6.10.0 版本以后，上游 CLIProxyAPI 及 [CPAMC](https://github.com/router-for-me/Cli-Proxy-API-Management-Center) 项目不再预置数据统计功能。CLIProxyAPIPlus 会通过自身的使用量日志和维护版 [CPAMC dashboard fork](https://github.com/kaitranntt/Cli-Proxy-API-Management-Center) 保留该工作流，并默认使用这个管理面板发布源。
+自 v6.10.0 版本以后，上游 CLIProxyAPI 及 [CPAMC](https://github.com/router-for-me/Cli-Proxy-API-Management-Center) 项目不再预置数据统计功能。CLIProxyAPIPlus 会通过自身的使用量日志和维护版 [CPAMC dashboard fork](https://github.com/router-for-me/Cli-Proxy-API-Management-Center) 保留该工作流，并默认使用这个管理面板发布源。
 
 如果需要独立的外部使用量服务，请使用以下项目：
 

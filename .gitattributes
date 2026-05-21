@@ -18,7 +18,7 @@ go.sum merge=union
 README-ccs-fork.md merge=ours
 
 # Image references diverge from upstream (Plus publishes official images to
-# kaitranntt/cli-proxy-api-plus with a GHCR mirror; upstream publishes to
+# tamntlib/cli-proxy-api-plus with a GHCR mirror; upstream publishes to
 # eceasy/cli-proxy-api). Keep ours so upstream sync does not silently revert
 # the image path back to upstream's.
 docker-compose.yml merge=ours
