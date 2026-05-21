@@ -5,6 +5,7 @@ type HomeConfig struct {
 	Enabled                 bool          `yaml:"enabled" json:"enabled"`
 	Host                    string        `yaml:"host" json:"-"`
 	Port                    int           `yaml:"port" json:"-"`
+	Password                string        `yaml:"password" json:"-"`
 	DisableClusterDiscovery bool          `yaml:"disable-cluster-discovery" json:"-"`
 	TLS                     HomeTLSConfig `yaml:"tls" json:"-"`
 }
